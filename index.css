@@ -1,0 +1,292 @@
+*,html{
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background: #111;
+}
+
+/* Bagian Navigasi */
+nav {
+    background-color: #26f;
+    padding: 6px 25px;
+    display: block;
+
+}
+nav button {
+    background: none;
+    padding: 3px;
+    border: none;
+    margin: 0% 6px;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+nav button:hover {
+    background: #0bf8;
+}
+
+nav button img {
+    color: aliceblue;
+    height: 32px;
+}
+
+nav button .kanan {
+    right: 0%;
+}
+
+/* Bagian Content */
+.content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+/* Bagian Code */
+.code-area {
+    width: 30%;
+}
+
+.editor-container {
+    display: flex;
+    border: 1px solid #ccc;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    width: 100%;
+    height: 85vh;
+    font-size: 14px;
+}
+
+.code-area h2 {
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background-color: #286;
+    border-right: solid 2px #fff;
+}
+
+.line-numbers {
+    padding: 10px;
+    background-color: #333;
+    color: #aaa;
+    text-align: left;
+    user-select: none;
+    font-size: 16px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    max-width: 20px;
+    scrollbar-color: #333;
+    line-height: 1.5;
+    display: block;
+}
+
+.line-numbers::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-box {
+  position: relative;
+  width: 95vw;
+  max-width: 95vw;
+  display: flex;
+}
+
+.code-editor {
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: transparent;
+    resize: none;
+    z-index: 2;
+    font-family: monospace;
+    line-height: 1.5;
+    white-space: pre;
+    caret-color: #fff;
+}
+
+#highlight {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #dcdcdc;
+    resize: none;
+    font-family: monospace;
+    line-height: 1.5;
+    white-space: pre;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 17.5px;
+}
+
+/* Area Designer */
+
+.website {
+    background: #bbb;
+    width: 80%;
+    transform: scale(50%);
+    margin: -75px -150px;
+    border: solid 5px #58f;
+    border-top: solid 50px #58f;
+    border-radius: 12px;
+    height: 100vh;
+    border-style: inside;
+    box-shadow: 25px 25px 0px 0px #46d6;
+}
+
+/* Area Kanan */
+.bagian-kanan{
+    background-color: #777;
+    width: 20%;
+    padding: 12px;
+    display: block;
+}
+/* Terminal */
+#Terminal {
+    background: #111;
+    padding: 10px;
+    color: green;
+    width: 90%;
+    border: solid 3px green;
+    border-top: solid 24px green;
+    border-radius: 12px;
+    height: 30vh;
+    resize: none;
+    outline: none;
+    margin: 25px auto;
+}
+
+/* Item Popup */
+#pilih ,#pilih-simpan{
+    z-index: 300;
+    background: #fff;
+    border: 3px solid black;
+    border-radius: 12px;
+    position: absolute;
+    padding: 25px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: -100%;
+    text-align: center;
+    transition: 1s;
+  }
+  
+  #pilih h2,#pilih-simpan h2{
+    font-size: 35px;
+  }
+  
+  #pilih button, #pilih-simpan button {
+    padding:10px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    width: 100%;
+    background: #4da;
+    font-size: 30px;
+    transition: 0.3s;
+  }
+  
+  input[type=file]{
+    width: 100%;
+  }
+  
+  #pilih-simpan input{
+    width: 100%;
+    border:none;
+    padding: 6px;
+    border-bottom: solid 2px black;
+    outline: none;
+  }
+
+  /* Bagian Tools */
+  .tools {
+    display: block;
+    background: #fff;
+    border: solid 5px #555;
+    border-style: inset;
+    min-height: 200px;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  ul, #myUL {
+    list-style-type: none;
+  }
+  
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+  }
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+
+  /* Bagian Tools Selesai */
+
+
+/* Responsive */
+
+/* Tablet - Mobile */
+@media (max-width:768px){
+    .content {
+        display: block;
+    }
+    .website{ 
+        margin: -12px 0;
+        width: 100%;
+        height: 75vh;
+    }
+    .code-area {
+        width: 100%;
+    }
+    .bagian-kanan {
+        width: 100%;
+    }
+    #pilih, #pilih-simpan {
+        width: 75%;
+    }
+}
+/* Mobile */
+@media (max-width:450px){
+    .website{
+        height: 60vh;
+    }
+}
+@media (max-width:320px){
+    .website{
+        height: 100%;
+    }
+}

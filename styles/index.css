@@ -146,6 +146,7 @@ nav button .kanan {
     width: 20%;
     padding: 12px;
     display: block;
+    overflow-y: scroll;
 }
 /* Terminal */
 #Terminal {

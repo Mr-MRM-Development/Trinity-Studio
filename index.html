@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <!-- Monaco Editor -->
+    
+
+
+    <title>Trinity Studio</title>
+</head>
+<body>
+    <nav>
+        <!-- Sebelah Kiri -->
+        <a href="../index.html">
+            <button title="Beranda">
+                <img src="assets/icon/svg/home.svg">
+            </button>
+        </a>
+
+        <button onclick="baru()" title="Baru">
+            <img src="assets/icon/svg/file-plus.svg">
+        </button>
+        <button onclick="buka()" title="Buka">
+            <img src="assets/icon/svg/folder.svg">
+        </button>
+        <button onclick="mulai_simpan()" title="Simpan">
+            <img src="assets/icon/svg/save.svg">
+        </button>
+        <button onclick="Mulai()" title="Mulai">
+            <img src="assets/icon/svg/play.svg">
+        </button>
+    </nav>
+    <div class="content">
+        <!-- Area Code -->
+        <div class="code-area" id="codearea">
+            <h2>Code Area</h2>
+            <div class="editor-container">
+                <div class="line-numbers" id="lineNumbers"></div>
+                <div class="code-box">
+                  <textarea id="code" class="code-editor" spellcheck="false"></textarea>
+                  <div id="highlight"></div>
+                </div>
+            </div>
+            
+            <script src="script/index-auto_close.js"></script>
+            <script src="script/index-code.js"></script>
+        </div>
+        <!-- Area Kanan -->
+        <!-- Area Designer -->
+        <iframe class="website" id="website">
+
+        </iframe>
+		<!-- <script src="script/index-play.js"></script> -->
+        <script src="script/index-design.js"></script>
+        <!-- Kananan -->
+        <div class="bagian-kanan">
+            <textarea id="Terminal" placeholder="Ini Adalah Terminal ..."></textarea>
+            <!-- Bagian Tools -->
+            <div class="tools">
+                <!-- Satu Treeview -->
+                <ul id="myUL">
+                    <li><span class="caret">Alat</span>
+                      <ul class="nested">
+                        <li>Water</li>
+                        <li>Coffee</li>
+                        <li><span class="caret">Tea</span>
+                          <ul class="nested">
+                            <li>Black Tea</li>
+                            <li>White Tea</li>
+                            <li><span class="caret">Green Tea</span>
+                              <ul class="nested">
+                                <li>Sencha</li>
+                                <li>Gyokuro</li>
+                                <li>Matcha</li>
+                                <li>Pi Lo Chun</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>  
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- End -->
+                <!-- Satu Treeview -->
+                <ul id="myUL">
+                    <li><span class="caret">Alat</span>
+                      <ul class="nested">
+                        <li>Water</li>
+                        <li>Coffee</li>
+                        <li><span class="caret">Tea</span>
+                          <ul class="nested">
+                            <li>Black Tea</li>
+                            <li>White Tea</li>
+                            <li><span class="caret">Green Tea</span>
+                              <ul class="nested">
+                                <li>Sencha</li>
+                                <li>Gyokuro</li>
+                                <li>Matcha</li>
+                                <li>Pi Lo Chun</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>  
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- End -->
+                  <script src="script/index-tree-view.js"></script>
+            </div>
+        </div>
+    </div>
+        <!-- Menu popup -->
+        <div id="pilih">
+            <h2>Pilih File</h2><br>
+            <input type="file" id="sumberfile"><br>
+            <button onclick="readFile()">Buka</button>
+            <button onclick="batal()">Batal</button>
+        </div>
+        
+        <div id="pilih-simpan">
+            <h2>Namai File</h2><br>
+            <input type="Text" id="nama" placeholder="Nama.Extensi"><br>
+            <button onclick="simpan()">Simpan</button>
+            <button onclick="batal_simpan()">Batal</button>
+        </div>
+    
+    <!-- Script Utama -->
+     <script src="script/index-main.js"></script>
+     <script src="script/index-color-filter.js"></script>
+
+     <!-- Script Local -->
+    
+</body>
+</html>

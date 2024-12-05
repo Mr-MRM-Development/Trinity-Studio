@@ -274,8 +274,7 @@ nav button .kanan {
         width: 100%;
     }
     .bagian-kanan {
-        left: 0;
-        right: 0;
+        width: 95%;
     }
     #pilih, #pilih-simpan {
         width: 75%;
